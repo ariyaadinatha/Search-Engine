@@ -17,3 +17,5 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function() {return redirect()->to("/landing");});
 Route::get('/landing', 'PageRequestController@viewLanding');
+Route::get('/test', 'PageRequestController@viewTest');
+Route::get('/about', 'PageRequestController@viewAbout');

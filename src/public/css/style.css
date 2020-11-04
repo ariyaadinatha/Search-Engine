@@ -1,7 +1,15 @@
 body {
-    background: #fff;
+    background: #303030;
     color: #444;
     font-family: "Open Sans", sans-serif;
+}
+
+.card {
+    margin: 12px;
+}
+
+.container {
+    padding: 15px;
 }
 
 a {
@@ -34,25 +42,11 @@ h6 {
     padding: 0;
 }
 
-footer {
-    background-color: #303030;
-    color: #d5d5d5;
-    padding-top: 2rem;
-}
-
-footer p {
-    font-size: 1rem;
-}
-
 hr.light {
     border-top: 1px solid #d5d5d5;
     width: 75%;
     margin-top: 0.8rem;
     margin-bottom: 1rem;
-}
-
-footer a {
-    color: #d5d5d5;
 }
 
 .jumbotron {
@@ -67,4 +61,18 @@ footer a {
     min-height: 100vh;
     display: flex;
     align-items: center;
+}
+
+footer {
+    background-color: #303030;
+    color: #d5d5d5;
+    padding-top: 2rem;
+}
+
+footer p {
+    font-size: 1rem;
+}
+
+footer a {
+    color: #d5d5d5;
 }

@@ -1,3 +1,9 @@
+<? php 
+  // kalau pake sql
+  // $data = mysqli_connect('host','usernamehost','password','nama database');
+  // $dataterambil = mysqli_query($data, "SELECT * FROM <nama database>");
+?>
+
 <html lang="en">
 <head>
   <meta charset="utf-8">
@@ -64,19 +70,22 @@
 </body>
 
 <footer>
-<div class="container-fluid padding content">
+<div class="container padding content">
 <div class="row text-center">
 	<div class="col-md-4">
     <hr class="light">
 		<!--  <img src="{{ URL::asset('#') }}" height=230px> -->
     <h5> Aljabar Linier dan Geometri </h5>
     <hr class="light">
+    <a href = "/about"> About Us </a>
+    <p> Link Laporan </p>
+    <a href="/test"> Cek Page Hasil </a>
 	</div>
 	<div class="col-md-4">
 		<hr class="light">
 		<h5> Services </h5>
 		<hr class="light">
-		<p> Search </p>
+		<a href = "/landing"> Search </a>
 		<p> Upload </p>
 
 	</div>

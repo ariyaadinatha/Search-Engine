@@ -10,4 +10,14 @@ class PageRequestController extends Controller
     public function viewLanding(){
         return view("landing.landingIndex");
     }
+    
+    // ## -- 2. View Test
+    public function viewTest(){
+        return view("test.testIndex");
+    }
+
+    // ## -- 3. View About
+    public function viewAbout(){
+        return view("about.aboutIndex");
+    }
 }
