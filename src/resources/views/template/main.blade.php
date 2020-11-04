@@ -77,16 +77,18 @@
 		<!--  <img src="{{ URL::asset('#') }}" height=230px> -->
     <h5> Aljabar Linier dan Geometri </h5>
     <hr class="light">
-    <a href = "/about"> About Us </a>
-    <p> Link Laporan </p>
+    <p href = "/about"> About Us </p>
+    <p href="https://docs.google.com/document/d/1s8lDkk9MnG8NElMdDC2bsw-kxVbMJwv-1uYL40r6kds/edit?ts=5f9b8839">Link Laporan</p>
+    <!-- <p> Link Laporan </p> -->
     <a href="/test"> Cek Page Hasil </a>
 	</div>
 	<div class="col-md-4">
 		<hr class="light">
 		<h5> Services </h5>
 		<hr class="light">
-		<a href = "/landing"> Search </a>
+		<p href = "/landing"> Search </p>
 		<p> Upload </p>
+    <!-- yang ada href nya "kacau" kalau dibuat jadi a, jadi pending dulu wkkwkwk -->
 
 	</div>
 	<div class="col-md-4">

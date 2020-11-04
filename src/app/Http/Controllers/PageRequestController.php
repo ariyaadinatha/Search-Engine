@@ -20,4 +20,8 @@ class PageRequestController extends Controller
     public function viewAbout(){
         return view("about.aboutIndex");
     }
+
+    public function viewUpload(){
+        return view("upload.uploadIndex");
+    }
 }
