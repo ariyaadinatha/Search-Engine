@@ -16,4 +16,14 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('/', function() {return redirect()->to("/landing");});
+
+
+Route::get('/about', 'PageRequestController@viewAbout');
 Route::get('/landing', 'PageRequestController@viewLanding');
+
+Route::get('/post', 'PostController@viewIndex');
+Route::get('/post/create', 'PostController@create');
+Route::post('/post/store', 'PostController@store');
+
+
+Route::get('/test', 'PageRequestController@viewTest');

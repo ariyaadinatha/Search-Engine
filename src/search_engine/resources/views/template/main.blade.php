@@ -64,20 +64,22 @@
 </body>
 
 <footer>
-<div class="container-fluid padding content">
+<div class="container padding content">
 <div class="row text-center">
 	<div class="col-md-4">
     <hr class="light">
 		<!--  <img src="{{ URL::asset('#') }}" height=230px> -->
     <h5> Aljabar Linier dan Geometri </h5>
     <hr class="light">
+    <p> About Us </p>
 	</div>
 	<div class="col-md-4">
 		<hr class="light">
 		<h5> Services </h5>
 		<hr class="light">
-		<p> Search </p>
-		<p> Upload </p>
+		<a href="#"> <p> Search </p> </a>
+		<a href="/post/create"> <p> Upload </p> </a>
+    <a href="/post/"> <p> Post </p> </a>
 
 	</div>
 	<div class="col-md-4">

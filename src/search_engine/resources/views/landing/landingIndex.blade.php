@@ -7,7 +7,7 @@
     <h1 class="display-4 text-center">How Can We Help You?</h1>
     <!-- <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p> -->
       <div class="">
-        <form class="justify-content-center">
+        <form action="#" method=post class="justify-content-center">
             <div class="input-group">
               <input type="text" class="form-control" placeholder="Search">
               <div class="input-group-btn">
