@@ -1,1 +1,0 @@
-ini about<?php /**PATH /home/adinatha/Documents/Programming/Website/Algeo02-19048/src/search_engine/resources/views/about/aboutIndex.blade.php ENDPATH**/ ?>
