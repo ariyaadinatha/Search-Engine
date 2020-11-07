@@ -8,5 +8,13 @@ Anggota Kelompok :
 
 
 ---------------------------------------------------------------------------------------------
-How to run :
-1. ???
+# How to run :
+1. install composer
+2. install php
+3. install NPM
+4. composer install
+5. npm install
+6. konfigurasi .env
+7. generate key
+8. migrasi database
+9. serve
