@@ -28,33 +28,6 @@
   @yield('style')
 </head>
 
-  <!--==========================
-  Header
-<header id="header">
-    <div class="container-fluid">
-    ### Ini buat logo ###
-    
-      <div class="logo float-left">
-        <a href="/landing" class="scrollto"><img src="{{ URL::asset('img/apple-touch-icon.png') }}" width="30" height="30" alt=""></a>
-         <a href="#header" class="scrollto"><img src="img/logo.png" alt="" class="img-fluid"></a> class="active" 
-      </div>
-    
-    #########
-    
-        <nav class="navbar navbar-dark bg-dark justify-content-between">
-          <a class="navbar-brand">Search Engine</a>
-          <form class="form-inline">
-            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-          </form>
-        </nav>
-    
-    </div>
-</header>
-============================-->
-<!-- #header -->
-
-
 <body>
   @yield('content')
 </body>
