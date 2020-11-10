@@ -22,3 +22,4 @@ Route::get('/landing', 'PageRequestController@viewLanding');
 Route::get('/post', 'PostController@viewIndex');
 Route::get('/post/create', 'PostController@create');
 Route::post('/post/store', 'PostController@store');
+Route::get('/post/{post:id}', 'PostController@show');

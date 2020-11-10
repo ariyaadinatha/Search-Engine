@@ -13,7 +13,7 @@
                 <img class="card-img rounded" src="/{{$post->image}}" alt="Card image" style="height:12vw;">
                 <div class="card-img-overlay d-flex align-items-end transparent rounded">
                     <div class="#">
-                        <h5 class="card-title">{{$post->title}}</h5>
+                        <a href="/post/{{$post->id}}"> <h5 class="card-title">{{$post->title}}</h5> </a>
                         <p class="card-text">{{$post->description}}
                         </p>
                     </div>
