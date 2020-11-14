@@ -26,8 +26,8 @@ class ProsesLanjut:
                 if(Hasil[idxmax][1] <= Hasil[j][1]):
                     idxmax = j
                     
-            temp = Hasil[idxmax][1]
-            Hasil[idxmax][1] = Hasil[j][1]
-            Hasil[j][1] = temp
+            temp = Hasil[idxmax]
+            Hasil[idxmax] = Hasil[j]
+            Hasil[j] = temp
 
         return Hasil
