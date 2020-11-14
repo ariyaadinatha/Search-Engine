@@ -11,9 +11,6 @@ C = importlib.import_module('count')
 CK = CK.TiapDokumen
 C = C.IsiDirektori
 
-# Seharusnya jadi mainnya
-Files = C.FilesInDirectory()
-    
 class ProsesLanjut:
     Hasil = []
     # di sini querynya udah ada
