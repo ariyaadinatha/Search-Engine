@@ -6,6 +6,7 @@ import math
 from nltk.stem import PorterStemmer
 from nltk.tokenize import sent_tokenize, word_tokenize
 CK = importlib.import_module('cosineSim')
+C = importlib.import_module('count')
 
 CK = CK.TiapDokumen
 C = C.IsiDirektori

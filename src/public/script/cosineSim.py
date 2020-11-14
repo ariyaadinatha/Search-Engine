@@ -5,6 +5,7 @@ import math
 
 from nltk.stem import PorterStemmer
 from nltk.tokenize import sent_tokenize, word_tokenize
+from nltk.corpus import stopwords
 
 location = os.getcwd()
 docloc = location + '/uploaded/doc/'
@@ -21,11 +22,13 @@ class TiapDokumen:
         
         # me return "data" yang hampir mirip dengan yang diminta
         # judul dokumen (pada kasus ini namafile)
-        # semua kata pada dokumen
+        # semua kata pada dokumen (setelah stopwords dihilangkan dan distem)
         # banyaknya kata pada dokumen (tanda baca tidak dihilangkan)
         # kalimat pertama
 
         hasil = [namafile]
+        stop_words = set(stopwords.words('english'))
+        print(stop_words)
 
         # namafile ditambah dengan docloc
         namafile = docloc + namafile
@@ -34,10 +37,9 @@ class TiapDokumen:
         
         idxTitik = File.find('.')
         # idxTitik adalah indeks titik berada
-
         
         isiFile = word_tokenize(File)
-        
+        filteredFile = [words for words in isiFile if not words in stop_words]
         ''' # FOR TESTING PURPOSE #
         for isi in listIsi:
             hasilstem = ps.stem(isi)
@@ -53,8 +55,8 @@ class TiapDokumen:
             elmtIsi.append(listStemmed.count(ps.stem(isi)))
             frekIsi.append(elmtIsi)
         '''
-        hasil.append(isiFile)
-        hasil.append(len(isiFile))
+        hasil.append(filteredFile)
+        hasil.append(len(filteredFile))
         hasil.append(File[:idxTitik])
 
         return hasil
