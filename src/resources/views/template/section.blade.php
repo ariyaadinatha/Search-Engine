@@ -58,7 +58,7 @@
 		<hr class="light">
 		<h5> Services </h5>
 		<hr class="light">
-		<a href="#"> <p> Search </p> </a>
+		<a href="/search"> <p> Search </p> </a>
 		<a href="/post/create"> <p> Upload </p> </a>
         <a href="/post/"> <p> Post </p> </a>
 	</div>

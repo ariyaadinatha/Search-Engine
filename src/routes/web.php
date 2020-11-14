@@ -18,6 +18,7 @@ Route::get('/', function() {return redirect()->to("/landing");});
 
 Route::get('/about', 'PageRequestController@viewAbout');
 Route::get('/landing', 'PageRequestController@viewLanding');
+Route::get('/search', 'SearchController@search');
 
 Route::get('/post', 'PostController@viewIndex');
 Route::get('/post/create', 'PostController@create');

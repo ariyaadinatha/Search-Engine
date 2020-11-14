@@ -2,6 +2,9 @@
 
 namespace App\Http\Controllers;
 
+
+
+
 use Illuminate\Http\Request;
 use App\Post;
 use File;
@@ -9,8 +12,9 @@ use File;
 class PostController extends Controller
 {
     public function viewIndex()
-    {
+    {    
         $posts = Post::get();
+        
         return view('post.postIndex', ['posts' => $posts,]);
     }
 
