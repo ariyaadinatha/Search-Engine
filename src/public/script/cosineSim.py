@@ -17,6 +17,8 @@ class TiapDokumen:
         return
     '''
     
+    stop_words = set(stopwords.words('english'))
+    
     def JadiinList(namafile):
         # NAMAFILE BELUM DISERTAI DIREKTORI
         
@@ -27,8 +29,7 @@ class TiapDokumen:
         # kalimat pertama
 
         hasil = [namafile]
-        stop_words = set(stopwords.words('english'))
-        print(stop_words)
+        
 
         # namafile ditambah dengan docloc
         namafile = docloc + namafile
@@ -40,6 +41,7 @@ class TiapDokumen:
         
         isiFile = word_tokenize(File)
         filteredFile = [words for words in isiFile if not words in stop_words]
+        
         ''' # FOR TESTING PURPOSE #
         for isi in listIsi:
             hasilstem = ps.stem(isi)
@@ -55,6 +57,7 @@ class TiapDokumen:
             elmtIsi.append(listStemmed.count(ps.stem(isi)))
             frekIsi.append(elmtIsi)
         '''
+        
         hasil.append(filteredFile)
         hasil.append(len(filteredFile))
         hasil.append(File[:idxTitik])
@@ -74,7 +77,8 @@ class TiapDokumen:
         hasil = [namafile]
         
         TiapQuery = word_tokenize(query)
-        HimpQuery = set(TiapQuery)
+        filteredQuery = [words for words in TiapQuery if not words in stop_words]
+        himpQuery = set(filteredQuery)
         
         dotProduct = 0
         pjgQuery = 0
@@ -85,25 +89,28 @@ class TiapDokumen:
         stemFile = []
         
         # Melakukan STEM terhadap query
-        for isi in TiapQuery:
+        for isi in filteredQuery:
             stemQuery.append(ps.stem(isi))
+        himpStemQuery = set(stemQuery)
+        
         # Melakukan STEM terhadap isi File
         for isi in isiFile:
             stemFile.append(ps.stem(isi))
+        himpStemFile = set(stemFile)
 
         # menghitung panjang vektor query (kuadratnya) dengan membandingkan
         # frekuensi kemunculan tiap kata pada query yang telah diSTEM
-        for stemmed in set(stemQuery):
-            pjgQuery += (stemQuery.count(stemmed))**2
+        for stemmed in himpStemQuery:
+            pjgQuery += (stemQuery.count(stemmed)) ** 2
 
         # menghitung panjang vektor file (kuadratnya) dengan membandingkan
         # frekuensi kemunculan tiap kata di dalam file yang telah diSTEM
-        for stemmed in set(stemFile):
-            pjgFile += (stemFile.count(stemmed))**2
+        for stemmed in set(himpStemFile):
+            pjgFile += (stemFile.count(stemmed)) ** 2
 
         # menghitung dot product antara query dengan tiap kata di dalam file
         # mengalikan frekuensi kemunculan kata pada query dengan pada file
-        for stemmed in set(stemQuery):
+        for stemmed in himpStemQuery:
             frekQuery = stemQuery.count(stemmed)
             frekFile = stemFile.count(stemmed)
             dotProduct += frekQuery * frekFile
