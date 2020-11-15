@@ -5,6 +5,8 @@ import math
 
 from nltk.stem import PorterStemmer
 from nltk.tokenize import sent_tokenize, word_tokenize
+from nltk.corpus import stopwords
+
 CK = importlib.import_module('cosineSim')
 C = importlib.import_module('count')
 
