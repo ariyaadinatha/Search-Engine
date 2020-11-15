@@ -21,6 +21,8 @@ class CreatePostsTable extends Migration
             $table->string('document_title');
             $table->string('document');
             $table->string('image');
+            $table->text('kalimat_pertama')->nullable();
+            $table->integer('jumlah_kata')->nullable();
             $table->timestamps();
         });
     }
