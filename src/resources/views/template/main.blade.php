@@ -40,6 +40,7 @@
 		<!--  <img src="{{ URL::asset('#') }}" height=230px> -->
     <h5> Aljabar Linier dan Geometri </h5>
     <hr class="light">
+    <a href="/about"> <p> About Us </p> </a>
 	</div>
 	<div class="col-md-4">
 		<hr class="light">

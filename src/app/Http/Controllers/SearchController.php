@@ -47,18 +47,37 @@ class SearchController extends Controller
     {
         $search = $request->search;
         $slug = str_slug($search, '-');
-        Search::create([
-            'search' => $search,
-            'search_slug' => $slug,
-        ]);
 
+        $posts=Post::get();
+
+        foreach ($posts as $post)
+        {
+            $process = new Process(['/usr/bin/python3', ''. public_path() .'/script/similarity.py',"{$search}","{$post->document_title}"]); // ngelempar input
+            $process->run();
+            
+            // executes after the command finishes
+            if (!$process->isSuccessful()) {
+                throw new ProcessFailedException($process);
+            }
+    
+            $similarity = $process->getOutput();
+
+            echo $similarity;
+
+            Search::create([
+                'post_id' => $post->id,
+                'search' => $search,
+                'search_slug' => $slug,
+                'similarity' => $similarity,
+            ]);
+        }
         return redirect()->to("/search/{$slug}");
     }
 
     public function show(Search $search)
     {
         $posts=Post::get();
-
+            
         return view('search.searchIndex', ['search' => $search,
                                             'posts' => $posts]);
     }

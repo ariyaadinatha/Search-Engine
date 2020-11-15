@@ -17,7 +17,7 @@ class CreateResultsTable extends Migration
             $table->id();
             $table->foreignId('search_id');
             $table->foreignId('post_id');
-            $table->integer('similarity');
+            $table->float('similarity');
             $table->timestamps();
         });
     }

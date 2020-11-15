@@ -6,8 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Search extends Model
 {
-    protected $table = 'search';
-    protected $fillable = ['search', 'search_slug'];
+    protected $table = 'searchs';
+    protected $fillable = ['post_id','search', 'search_slug','similarity'];
 
     public function posts()
     {

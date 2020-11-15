@@ -31,13 +31,14 @@
 <header id="header">
     <div class="container-fluid">
         <nav class="navbar navbar-dark bg-dark justify-content-between">
-          <a href="/landing" class="navbar-brand">Search Engine</a>
-          <form class="form-inline">
-            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+          <a href="/landing" class="navbar-brand pt-3">Search Engine</a>
+          <form action="/search/store" class="form-inline">
+            @csrf
+              <input type="text" class="form-control mr-sm-2" placeholder="Search" aria-label="Search" 
+              value="{{ old('search') }}" required autocomplete="search" autofocus>
+              <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
           </form>
         </nav>
-    
     </div>
 </header>
 
@@ -53,6 +54,7 @@
 		<!--  <img src="{{ URL::asset('#') }}" height=230px> -->
     <h5> Aljabar Linier dan Geometri </h5>
     <hr class="light">
+    <a href="/about"> <p> About Us </p> </a>
 	</div>
 	<div class="col-md-4">
 		<hr class="light">

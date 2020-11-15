@@ -8,6 +8,10 @@ body {
     margin: 12px;
 }
 
+.container-body {
+    min-height: 32vw;
+}
+
 a {
     color: #1bb1dc;
     transition: 0.5s;
@@ -78,7 +82,7 @@ footer a {
 }
 
 .vertical-center {
-    min-height: 100vh;
+    min-height: 90vh;
     display: flex;
     align-items: center;
 }
