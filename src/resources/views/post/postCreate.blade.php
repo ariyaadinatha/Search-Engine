@@ -1,12 +1,14 @@
 @extends('template.section')
 
 @section('content')
-<div class="container">
+<div class="container container-body">
     <form action="/post/store" enctype="multipart/form-data" method="post">
         @csrf
 
-        <div class="row">
+        <div class="row pt-5">
+            
             <div class="col-8 offset-2">
+                <h2 class="display-4"> Input File Form </h2>
                 <div class="form-group">
                     <label for="title" class="col-form-label"> Title </label>
                         <input id="title" type="text" class="form-control @error('title') is-invalid @enderror" 

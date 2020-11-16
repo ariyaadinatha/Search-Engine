@@ -13,34 +13,12 @@ use Symfony\Component\Process\Exception\ProcessFailedException;
 
 class SearchController extends Controller
 {
-    public function search()
+    public function term()
     {
        
         $posts=Post::get();
-        /*
-        $text = "eek bau"; // input masuk sini
-        $text2 = "ngocok"; // input masuk sini
-
-         $process = new Process(['python', ''. public_path() .'/script/test.py',"{$text}","{$text2}"]); // ngelempar input
-       
-
-    
-        //$process = new Process("python3 /Path/To/analyse_string.py \"{$text}\"");
-        $process->run();
-    
+        return view('search.termIndex', ['posts' => $posts]);
         
-        // executes after the command finishes
-        if (!$process->isSuccessful()) {
-            throw new ProcessFailedException($process);
-        }
-
-        echo $process->getOutput();
-
-        */
-
-        return view('search.searchTest', ['posts' => $posts]);
-        
-
     }
 
     public function store(Request $request)
@@ -68,7 +46,7 @@ class SearchController extends Controller
                 'post_id' => $post->id,
                 'search' => $search,
                 'search_slug' => $slug,
-                'similarity' => $similarity,
+                'similarity' => (float)$similarity,
             ]);
         }
         return redirect()->to("/search/{$slug}");
@@ -77,8 +55,12 @@ class SearchController extends Controller
     public function show(Search $search)
     {
         $posts=Post::get();
-            
+        $hasilSearch = Search::where('search_slug', $search->search_slug)
+                            ->orderBy('similarity', 'desc')
+                            ->get();
+
         return view('search.searchIndex', ['search' => $search,
-                                            'posts' => $posts]);
+                                            'posts' => $posts,
+                                            'hasilSearch' => $hasilSearch]);
     }
 }

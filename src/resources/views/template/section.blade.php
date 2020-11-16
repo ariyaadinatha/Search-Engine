@@ -32,12 +32,7 @@
     <div class="container-fluid">
         <nav class="navbar navbar-dark bg-dark justify-content-between">
           <a href="/landing" class="navbar-brand pt-3">Search Engine</a>
-          <form action="/search/store" class="form-inline">
-            @csrf
-              <input type="text" class="form-control mr-sm-2" placeholder="Search" aria-label="Search" 
-              value="{{ old('search') }}" required autocomplete="search" autofocus>
-              <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-          </form>
+
         </nav>
     </div>
 </header>
@@ -60,9 +55,9 @@
 		<hr class="light">
 		<h5> Services </h5>
 		<hr class="light">
-		<a href="/search"> <p> Search </p> </a>
 		<a href="/post/create"> <p> Upload </p> </a>
-        <a href="/post/"> <p> Post </p> </a>
+    <a href="/post/"> <p> Post </p> </a>
+    <a href="/term"> <p> Term Table </p> </a>
 	</div>
 	<div class="col-md-4">
 		<hr class="light">
