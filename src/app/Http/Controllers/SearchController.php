@@ -15,9 +15,9 @@ class SearchController extends Controller
 {
     public function term()
     {
-       
-        $posts=Post::get();
-        return view('search.termIndex', ['posts' => $posts]);
+        $searchs=Search::get();
+
+        return view('search.termIndex', ['searchs' => $searchs,]);
         
     }
 
