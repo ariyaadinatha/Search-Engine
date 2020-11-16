@@ -59,5 +59,3 @@ use Symfony\Component\Process\Exception\ProcessFailedException;
 </div>
 
 @endsection
-
-@endsection
